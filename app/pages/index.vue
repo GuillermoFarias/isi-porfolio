@@ -84,157 +84,31 @@
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          <div
-            v-for="project in projects"
-            :key="project.id"
-            @click="openModal(project)"
-            class="group relative bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl card-hover cursor-pointer transform transition-all duration-500 hover:scale-[1.02]"
-          >
-            <div class="aspect-[4/3] bg-gradient-to-br overflow-hidden relative" :class="project.gradient">
-              <!-- Placeholder for project image -->
-              <div class="w-full h-full flex items-center justify-center">
-                <svg class="w-40 h-40 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                <span class="text-white font-bold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                  Ver Proyecto →
-                </span>
-              </div>
-            </div>
-            <div class="p-8">
-              <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
-                {{ project.title }}
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">{{ project.description }}</p>
-              <div class="flex flex-wrap gap-2">
-                <span
-                  v-for="tag in project.tags"
-                  :key="tag"
-                  class="px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/50 dark:to-pink-900/50 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full"
-                >
-                  {{ tag }}
-                </span>
-              </div>
-            </div>
-          </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <ProjectCard
+            title="Atendia - Atención al Cliente con IA"
+            description="Identidad de marca completa para plataforma de servicio al cliente"
+            gradient="from-blue-400 to-purple-500"
+            :tags="['Branding', 'Logo Design', 'IA', 'Corporate Identity']"
+            project-url="/projects/atendia"
+          />
+          <ProjectCard
+            title="CitrusLab - Startup Tech en IA"
+            description="Branding y merchandising para empresa tecnológica emergente"
+            gradient="from-orange-400 to-amber-500"
+            :tags="['Branding', 'Merchandising', 'Startup', 'AI']"
+            project-url="/projects/citruslab"
+          />
+          <ProjectCard
+            title="Pomely - Sistema POS Intuitivo"
+            description="Diseño de marca y UI para punto de venta moderno"
+            gradient="from-pink-500 to-orange-400"
+            :tags="['UI/UX', 'Branding', 'Mobile App', 'POS']"
+            project-url="/projects/pomely"
+          />
         </div>
       </div>
     </section>
-
-    <!-- Project Modal -->
-    <Teleport to="body">
-      <Transition name="modal">
-        <div
-          v-if="selectedProject"
-          @click="closeModal"
-          class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
-        >
-          <div
-            @click.stop
-            class="relative w-full max-w-6xl max-h-[90vh] bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-2xl"
-          >
-            <!-- Close button -->
-            <button
-              @click="closeModal"
-              class="absolute top-6 right-6 z-10 w-12 h-12 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 transition-all shadow-lg hover:scale-110"
-            >
-              <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-
-            <div class="overflow-y-auto max-h-[90vh] custom-scrollbar">
-              <!-- Image Gallery -->
-              <div class="relative">
-                <div class="aspect-[16/9] bg-gradient-to-br overflow-hidden" :class="selectedProject.gradient">
-                  <img
-                    v-if="selectedProject.images[currentImageIndex]"
-                    :src="selectedProject.images[currentImageIndex]"
-                    :alt="`${selectedProject.title} - Imagen ${currentImageIndex + 1}`"
-                    class="w-full h-full object-cover"
-                  />
-                  <div v-else class="w-full h-full flex items-center justify-center">
-                    <svg class="w-48 h-48 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                </div>
-
-                <!-- Navigation arrows -->
-                <button
-                  v-if="currentImageIndex > 0"
-                  @click="previousImage"
-                  class="absolute left-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 transition-all shadow-xl hover:scale-110"
-                >
-                  <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-
-                <button
-                  v-if="currentImageIndex < selectedProject.images.length - 1"
-                  @click="nextImage"
-                  class="absolute right-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 transition-all shadow-xl hover:scale-110"
-                >
-                  <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-
-                <!-- Image counter -->
-                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/60 backdrop-blur-sm rounded-full text-white text-sm font-semibold">
-                  {{ currentImageIndex + 1 }} / {{ selectedProject.images.length }}
-                </div>
-              </div>
-
-              <!-- Project Details -->
-              <div class="p-8 md:p-12">
-                <h3 class="text-4xl font-bold mb-4 gradient-text">{{ selectedProject.title }}</h3>
-                <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">{{ selectedProject.fullDescription }}</p>
-                
-                <div class="flex flex-wrap gap-2 mb-8">
-                  <span
-                    v-for="tag in selectedProject.tags"
-                    :key="tag"
-                    class="px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/50 dark:to-pink-900/50 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full"
-                  >
-                    {{ tag }}
-                  </span>
-                </div>
-
-                <!-- Thumbnails -->
-                <div class="flex gap-3 overflow-x-auto pb-2">
-                  <div
-                    v-for="(image, index) in selectedProject.images"
-                    :key="index"
-                    @click="currentImageIndex = index"
-                    class="relative flex-shrink-0 w-24 h-24 rounded-xl overflow-hidden cursor-pointer transition-all hover:scale-105"
-                    :class="currentImageIndex === index ? 'ring-4 ring-purple-500' : 'opacity-60 hover:opacity-100'"
-                  >
-                    <div class="w-full h-full bg-gradient-to-br" :class="selectedProject.gradient">
-                      <img
-                        v-if="image"
-                        :src="image"
-                        :alt="`Thumbnail ${index + 1}`"
-                        class="w-full h-full object-cover"
-                      />
-                      <div v-else class="w-full h-full flex items-center justify-center">
-                        <svg class="w-8 h-8 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Transition>
-    </Teleport>
 
     <!-- About Section -->
     <section id="about" class="section-padding bg-white dark:bg-gray-900">
@@ -411,52 +285,6 @@ useHead({
   ]
 })
 
-// Types
-interface Project {
-  id: number
-  title: string
-  description: string
-  fullDescription: string
-  tags: string[]
-  gradient: string
-  images: (string | null)[]
-}
-
-// Modal state
-const selectedProject = ref<Project | null>(null)
-const currentImageIndex = ref(0)
-
-// Projects data with full descriptions and image arrays
-const projects = [
-  {
-    id: 1,
-    title: 'Atendia - Atención al Cliente con IA',
-    description: 'Identidad de marca completa para plataforma de servicio al cliente',
-    fullDescription: 'Desarrollé la identidad visual completa para Atendia, una plataforma innovadora de atención al cliente potenciada por inteligencia artificial. El proyecto incluyó el diseño del logotipo con un avión de papel que simboliza la rapidez y eficiencia en la comunicación, paleta de colores en tonos azules y púrpuras que transmiten confianza y tecnología, papelería corporativa, y guías de uso de marca. El resultado es una identidad moderna y profesional que comunica innovación y cercanía con el cliente.',
-    tags: ['Branding', 'Logo Design', 'IA', 'Corporate Identity'],
-    gradient: 'from-blue-400 to-purple-500',
-    images: ['/projects/atendia-logo.svg', '/projects/atendia-branding.svg', null, null, null]
-  },
-  {
-    id: 2,
-    title: 'CitrusLab - Startup Tech en IA',
-    description: 'Branding y merchandising para empresa tecnológica emergente',
-    fullDescription: 'Creé el sistema de identidad visual para CitrusLab, una startup especializada en soluciones de inteligencia artificial. El logo presenta una naranja estilizada que representa frescura, innovación y la naturaleza orgánica de sus soluciones tech. Desarrollé una paleta vibrante en naranjas y amarillos, diseños para merchandising corporativo incluyendo camisetas y bolsas tote, y un manual de marca completo. El branding refleja energía, creatividad y el enfoque fresco que la empresa aporta al sector tecnológico.',
-    tags: ['Branding', 'Merchandising', 'Startup', 'AI'],
-    gradient: 'from-orange-400 to-amber-500',
-    images: ['/projects/citruslab-logo.svg', '/projects/citruslab-merch.svg', null, null, null]
-  },
-  {
-    id: 3,
-    title: 'Pomely - Sistema POS Intuitivo',
-    description: 'Diseño de marca y UI para punto de venta moderno',
-    fullDescription: 'Diseñé la identidad de marca y la interfaz de usuario para Pomely, un sistema de punto de venta orientado a la simplicidad y facilidad de uso. El logo utiliza un gajo de naranja que simboliza una porción, conectando con la idea de transacciones y comercio de manera fresca y amigable. Desarrollé mockups de la aplicación móvil, diseño de la interfaz de usuario con enfoque en usabilidad, papelería corporativa, y elementos de branding. Los colores rosa y naranja aportan un toque moderno y accesible, diferenciándose de las soluciones POS tradicionales.',
-    tags: ['UI/UX', 'Branding', 'Mobile App', 'POS'],
-    gradient: 'from-pink-500 to-orange-400',
-    images: ['/projects/pomely-logo.svg', '/projects/pomely-app.svg', null, null, null]
-  }
-]
-
 const skills = [
   { name: 'Branding', level: 70 },
   { name: 'Adobe Illustrator', level: 65 },
@@ -465,84 +293,9 @@ const skills = [
   { name: 'UI/UX Design', level: 60 },
   { name: 'Typography', level: 66 }
 ]
-
-// Modal functions
-const openModal = (project: Project) => {
-  selectedProject.value = project
-  currentImageIndex.value = 0
-  document.body.style.overflow = 'hidden'
-}
-
-const closeModal = () => {
-  selectedProject.value = null
-  currentImageIndex.value = 0
-  document.body.style.overflow = 'auto'
-}
-
-const nextImage = () => {
-  if (selectedProject.value && currentImageIndex.value < selectedProject.value.images.length - 1) {
-    currentImageIndex.value++
-  }
-}
-
-const previousImage = () => {
-  if (currentImageIndex.value > 0) {
-    currentImageIndex.value--
-  }
-}
-
-// Close modal on ESC key
-if (process.client) {
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && selectedProject.value) {
-      closeModal()
-    }
-  })
-}
 </script>
 
 <style scoped>
-/* Modal transition */
-.modal-enter-active,
-.modal-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.modal-enter-from,
-.modal-leave-to {
-  opacity: 0;
-}
-
-.modal-enter-active > div,
-.modal-leave-active > div {
-  transition: transform 0.3s ease;
-}
-
-.modal-enter-from > div,
-.modal-leave-to > div {
-  transform: scale(0.9);
-}
-
-/* Custom scrollbar for modal */
-.custom-scrollbar::-webkit-scrollbar {
-  width: 8px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #9333ea, #ec4899);
-  border-radius: 10px;
-}
-
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #7e22ce, #db2777);
-}
-
-/* Animations */
 @keyframes blob {
   0%, 100% {
     transform: translate(0, 0) scale(1);

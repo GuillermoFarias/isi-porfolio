@@ -1,6 +1,4 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import tailwindcss from "@tailwindcss/vite";
-
 export default defineNuxtConfig({
   ssr: true,
   compatibilityDate: '2025-07-15',
@@ -50,10 +48,5 @@ export default defineNuxtConfig({
     layoutTransition: false
   },
   css: ['~/assets/css/main.css'],
-  modules: ['@pinia/nuxt', '@nuxt/image', '@nuxtjs/seo'],
-  vite: {
-    plugins: [
-      tailwindcss(),
-    ]
-  }
+  modules: ['@pinia/nuxt', '@nuxt/image', '@nuxtjs/seo', '@nuxtjs/tailwindcss']
 })

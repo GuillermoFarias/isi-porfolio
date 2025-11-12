@@ -4,18 +4,18 @@
   >
     <nav class="container mx-auto px-4 py-5 md:px-8">
       <div class="flex items-center justify-between">
-        <a
-          href="#home"
+        <NuxtLink
+          to="/"
           class="text-2xl md:text-3xl font-bold transition-all duration-500 ease-in-out"
           :class="
-            isScrolled
-              ? 'opacity-100 translate-y-0'
-              : 'opacity-0 -translate-y-2'
+            isHomePage
+              ? (isScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2')
+              : 'opacity-100 translate-y-0'
           "
         >
           <span class="text-gray-900 dark:text-white">Isidora</span>
           <span class="gradient-text ms-1">Farías</span>
-        </a>
+        </NuxtLink>
 
         <div class="flex items-center gap-4">
           <!-- Dark mode toggle -->
@@ -132,11 +132,15 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, computed } from "vue";
 
+const route = useRoute();
 const isMenuOpen = ref(false);
 const isDark = ref(false);
 const isScrolled = ref(false);
+
+// Detectar si estamos en la página principal
+const isHomePage = computed(() => route.path === '/');
 
 const menuItems = [
   { label: "Inicio", href: "#home" },
