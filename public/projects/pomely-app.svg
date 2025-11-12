@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fce7f3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fed7aa;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <rect width="800" height="600" fill="url(#bg3)"/>
+  
+  <!-- Mobile app mockup -->
+  <rect x="150" y="100" width="200" height="400" rx="20" fill="#1e293b" filter="drop-shadow(0 10px 30px rgba(0,0,0,0.2))"/>
+  <rect x="160" y="120" width="180" height="360" rx="10" fill="#fff"/>
+  <image x="210" y="180" width="80" height="80" href="/projects/pomely-logo.svg"/>
+  <text x="250" y="290" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1e293b" text-anchor="middle">Pomely</text>
+  <rect x="180" y="320" width="160" height="40" rx="20" fill="#ec4899"/>
+  <text x="260" y="345" font-family="Arial, sans-serif" font-size="16" fill="#fff" text-anchor="middle">Iniciar</text>
+  
+  <!-- Stationery set -->
+  <rect x="450" y="150" width="280" height="200" rx="10" fill="#fff" filter="drop-shadow(0 10px 30px rgba(0,0,0,0.1))"/>
+  <image x="480" y="180" width="60" height="60" href="/projects/pomely-logo.svg"/>
+  <rect x="560" y="190" width="150" height="40" rx="5" fill="#fce7f3"/>
+  <image x="575" y="200" width="20" height="20" href="/projects/pomely-logo.svg"/>
+  <text x="605" y="218" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ec4899">Pomely POS</text>
+</svg>

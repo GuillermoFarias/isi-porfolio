@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="pomelyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f97316;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Orange segment/wedge shape -->
+  <path d="M100 100 L100 30 A70 70 0 0 1 145 140 Z" fill="url(#pomelyGradient)"/>
+  
+  <!-- Inner details -->
+  <path d="M100 100 L100 40" stroke="#fff" stroke-width="2" opacity="0.5"/>
+  <path d="M100 100 L135 125" stroke="#fff" stroke-width="2" opacity="0.5"/>
+  
+  <!-- Dots for texture -->
+  <circle cx="110" cy="70" r="3" fill="#fff" opacity="0.6"/>
+  <circle cx="120" cy="90" r="3" fill="#fff" opacity="0.6"/>
+  <circle cx="115" cy="110" r="3" fill="#fff" opacity="0.6"/>
+</svg>

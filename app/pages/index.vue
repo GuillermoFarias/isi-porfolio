@@ -80,7 +80,7 @@
             <span class="gradient-text">Mis Primeros Proyectos</span>
           </h2>
           <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Explorando el diseño gráfico y aprendiendo a crear experiencias visuales para marcas tecnológicas
+            Diseño de identidad visual para startups y empresas tech que buscan destacar en el mercado digital
           </p>
         </div>
 
@@ -430,39 +430,30 @@ const currentImageIndex = ref(0)
 const projects = [
   {
     id: 1,
-    title: 'NexaTech - Rebranding Completo',
-    description: 'Transformación de identidad visual para startup de IA',
-    fullDescription: 'Desarrollé una identidad de marca completa para NexaTech, una startup especializada en inteligencia artificial. El proyecto incluyó la creación de un logotipo moderno y minimalista, paleta de colores vibrante que refleja innovación tecnológica, y un sistema de diseño escalable. El resultado es una marca que comunica confianza, modernidad y vanguardia tecnológica, perfecta para atraer inversores y clientes del sector tech.',
-    tags: ['Branding', 'Logo Design', 'Identity', 'AI'],
-    gradient: 'from-violet-400 to-purple-500',
-    images: [null, null, null, null, null] // Placeholders para 5 imágenes
+    title: 'Atendia - Atención al Cliente con IA',
+    description: 'Identidad de marca completa para plataforma de servicio al cliente',
+    fullDescription: 'Desarrollé la identidad visual completa para Atendia, una plataforma innovadora de atención al cliente potenciada por inteligencia artificial. El proyecto incluyó el diseño del logotipo con un avión de papel que simboliza la rapidez y eficiencia en la comunicación, paleta de colores en tonos azules y púrpuras que transmiten confianza y tecnología, papelería corporativa, y guías de uso de marca. El resultado es una identidad moderna y profesional que comunica innovación y cercanía con el cliente.',
+    tags: ['Branding', 'Logo Design', 'IA', 'Corporate Identity'],
+    gradient: 'from-blue-400 to-purple-500',
+    images: ['/projects/atendia-logo.svg', '/projects/atendia-branding.svg', null, null, null]
   },
   {
     id: 2,
-    title: 'CloudFlow - Sistema de Diseño',
-    description: 'Sistema de diseño para plataforma SaaS',
-    fullDescription: 'Creé un sistema de diseño completo para CloudFlow, una plataforma SaaS de gestión empresarial. El proyecto abarcó desde la creación de componentes UI reutilizables, hasta la definición de patrones de interacción y guías de estilo. Implementé una biblioteca de componentes en Figma que facilita la consistencia visual en todo el producto, mejorando significativamente la experiencia del usuario y acelerando el proceso de desarrollo.',
-    tags: ['UI/UX', 'Design System', 'SaaS', 'Figma'],
-    gradient: 'from-purple-400 to-pink-500',
-    images: [null, null, null, null, null]
+    title: 'CitrusLab - Startup Tech en IA',
+    description: 'Branding y merchandising para empresa tecnológica emergente',
+    fullDescription: 'Creé el sistema de identidad visual para CitrusLab, una startup especializada en soluciones de inteligencia artificial. El logo presenta una naranja estilizada que representa frescura, innovación y la naturaleza orgánica de sus soluciones tech. Desarrollé una paleta vibrante en naranjas y amarillos, diseños para merchandising corporativo incluyendo camisetas y bolsas tote, y un manual de marca completo. El branding refleja energía, creatividad y el enfoque fresco que la empresa aporta al sector tecnológico.',
+    tags: ['Branding', 'Merchandising', 'Startup', 'AI'],
+    gradient: 'from-orange-400 to-amber-500',
+    images: ['/projects/citruslab-logo.svg', '/projects/citruslab-merch.svg', null, null, null]
   },
   {
     id: 3,
-    title: 'DevHub - Plataforma Colaborativa',
-    description: 'Diseño UX/UI para comunidad de desarrolladores',
-    fullDescription: 'Diseñé la experiencia completa de usuario para DevHub, una plataforma que conecta desarrolladores con proyectos open source. El enfoque estuvo en crear una interfaz intuitiva que facilite la colaboración, con un diseño moderno que refleja la cultura tech. Incluye sistema de perfiles, tableros de proyectos, chat integrado y herramientas de gestión de código, todo con una estética limpia y profesional.',
-    tags: ['UX', 'UI Design', 'Community', 'Tech'],
-    gradient: 'from-indigo-400 to-violet-500',
-    images: [null, null, null, null, null]
-  },
-  {
-    id: 4,
-    title: 'TechVision - Campaña Visual',
-    description: 'Identidad visual para conferencia tecnológica',
-    fullDescription: 'Desarrollé la identidad visual completa para TechVision, una conferencia anual de tecnología e innovación. El proyecto incluyó diseño de marca del evento, material promocional digital y físico, señalética, presentaciones, y toda la comunicación visual en redes sociales. Creé un lenguaje visual dinámico y futurista que captura el espíritu innovador del evento, utilizando gradientes vibrantes y tipografía moderna.',
-    tags: ['Event Branding', 'Marketing', 'Social Media', 'Print'],
-    gradient: 'from-pink-400 to-purple-500',
-    images: [null, null, null, null, null]
+    title: 'Pomely - Sistema POS Intuitivo',
+    description: 'Diseño de marca y UI para punto de venta moderno',
+    fullDescription: 'Diseñé la identidad de marca y la interfaz de usuario para Pomely, un sistema de punto de venta orientado a la simplicidad y facilidad de uso. El logo utiliza un gajo de naranja que simboliza una porción, conectando con la idea de transacciones y comercio de manera fresca y amigable. Desarrollé mockups de la aplicación móvil, diseño de la interfaz de usuario con enfoque en usabilidad, papelería corporativa, y elementos de branding. Los colores rosa y naranja aportan un toque moderno y accesible, diferenciándose de las soluciones POS tradicionales.',
+    tags: ['UI/UX', 'Branding', 'Mobile App', 'POS'],
+    gradient: 'from-pink-500 to-orange-400',
+    images: ['/projects/pomely-logo.svg', '/projects/pomely-app.svg', null, null, null]
   }
 ]
 
