@@ -9,17 +9,6 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare || true"
   },
-  "optionalDependencies": {
-    "lightningcss-linux-arm64-gnu": "^1.28.3",
-    "lightningcss-linux-x64-gnu": "^1.28.3",
-    "@oxc-parser/binding-linux-x64-gnu": "^0.95.0",
-    "@oxc-parser/binding-linux-arm64-gnu": "^0.95.0",
-    "oxc-transform-linux-x64-gnu": "^0.95.0",
-    "oxc-transform-linux-arm64-gnu": "^0.95.0"
-  },
-  "overrides": {
-    "lightningcss": "^1.28.3"
-  },
   "dependencies": {
     "@floating-ui/vue": "^1.1.9",
     "@nuxt/eslint": "1.9.0",
@@ -33,7 +22,7 @@
     "@tabler/icons-vue": "^3.35.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.10",
-    "@tailwindcss/vite": "^4.1.16",
+    "@tailwindcss/vite": "^4.1.17",
     "date-fns": "^4.1.0",
     "date-fns-tz": "^3.2.0",
     "dayjs": "^1.11.19",
@@ -42,16 +31,10 @@
     "pinia": "^3.0.3",
     "pinia-plugin-persistedstate": "^4.7.1",
     "preline": "^3.2.3",
-    "tailwindcss": "^4.1.16",
+    "tailwindcss": "^4.1.17",
     "uuid": "^13.0.0",
     "vue": "^3.5.22",
     "vue-email-editor": "^2.1.5",
     "vue-router": "^4.6.3"
-  },
-  "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.14.0",
-    "@tailwindcss/postcss": "^4.1.17",
-    "autoprefixer": "^10.4.22",
-    "postcss": "^8.5.6"
   }
 }
