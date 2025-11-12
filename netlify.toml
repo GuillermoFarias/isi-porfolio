@@ -4,6 +4,7 @@
 
 [build.environment]
   NODE_VERSION = "22.12.0"
+  NPM_CONFIG_BUILD_FROM_SOURCE = "true"
 
 [[redirects]]
   from = "/*"
