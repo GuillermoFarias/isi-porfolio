@@ -59,8 +59,13 @@ export default defineNuxtConfig({
         '.ngrok-free.app',
         '.ngrok.io',
         'localhost',
-        '.localhost.run'
+        '.localhost.run',
+        '.railway.app'
       ]
     }
+  },
+  nitro: {
+    preset: 'node-server',
+    compressPublicAssets: true
   }
 })
