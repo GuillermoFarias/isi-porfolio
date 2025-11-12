@@ -48,5 +48,10 @@ export default defineNuxtConfig({
     layoutTransition: false
   },
   css: ['~/assets/css/main.css'],
-  modules: ['@pinia/nuxt', '@nuxt/image', '@nuxtjs/seo', '@nuxtjs/tailwindcss']
+  modules: ['@pinia/nuxt', '@nuxt/image', '@nuxtjs/seo'],
+  postcss: {
+    plugins: {
+      '@tailwindcss/postcss': {},
+    },
+  },
 })
