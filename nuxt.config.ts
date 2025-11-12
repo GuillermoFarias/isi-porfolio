@@ -53,19 +53,6 @@ export default defineNuxtConfig({
   vite: {
     plugins: [
       tailwindcss(),
-    ],
-    server: {
-      allowedHosts: [
-        '.ngrok-free.app',
-        '.ngrok.io',
-        'localhost',
-        '.localhost.run',
-        '.railway.app'
-      ]
-    }
-  },
-  nitro: {
-    preset: 'node-server',
-    compressPublicAssets: true
+    ]
   }
 })
