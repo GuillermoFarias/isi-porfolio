@@ -11,7 +11,11 @@
   },
   "optionalDependencies": {
     "lightningcss-linux-arm64-gnu": "^1.28.3",
-    "lightningcss-linux-x64-gnu": "^1.28.3"
+    "lightningcss-linux-x64-gnu": "^1.28.3",
+    "@oxc-parser/binding-linux-x64-gnu": "^0.95.0",
+    "@oxc-parser/binding-linux-arm64-gnu": "^0.95.0",
+    "oxc-transform-linux-x64-gnu": "^0.95.0",
+    "oxc-transform-linux-arm64-gnu": "^0.95.0"
   },
   "overrides": {
     "lightningcss": "^1.28.3"

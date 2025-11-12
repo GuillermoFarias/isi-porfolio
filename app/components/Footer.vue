@@ -39,7 +39,7 @@
           <h4 class="text-xl font-bold mb-6">Conecta Conmigo</h4>
           <div class="flex gap-4">
             <a
-              href="https://linkedin.com/in/isidora-farias"
+              href="https://www.linkedin.com/in/isidora-far%C3%ADas-55239132a/"
               target="_blank"
               rel="noopener noreferrer"
               class="w-12 h-12 bg-white/10 hover:bg-white/20 dark:bg-gray-800/50 dark:hover:bg-gray-700 backdrop-blur-sm rounded-xl flex items-center justify-center transition-all hover:scale-110 group"
