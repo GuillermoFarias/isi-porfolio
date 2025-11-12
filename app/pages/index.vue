@@ -1,27 +1,37 @@
 <template>
-  <main class="bg-white">
+  <main class="bg-white dark:bg-gray-900 transition-colors duration-300">
     <!-- Hero Section -->
     <section id="home" class="min-h-screen flex items-center justify-center section-padding pt-32 relative overflow-hidden">
       <!-- Background decorative elements -->
-      <div class="absolute top-20 right-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
-      <div class="absolute top-40 left-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
-      <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+      <div class="absolute top-20 right-10 w-72 h-72 bg-purple-300 dark:bg-purple-900/30 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+      <div class="absolute top-40 left-10 w-72 h-72 bg-yellow-300 dark:bg-yellow-900/30 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 dark:bg-pink-900/30 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
       
       <div class="container mx-auto relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
-            <div class="inline-block px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full text-purple-700 font-semibold text-sm backdrop-blur-sm">
+            <div class="inline-block px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/50 dark:to-pink-900/50 rounded-full text-purple-700 dark:text-purple-300 font-semibold text-sm backdrop-blur-sm">
               ✨ Diseñadora Gráfica
             </div>
-            <h1 class="text-6xl md:text-7xl font-bold leading-tight">
-              <span class="block text-gray-900">Isidora</span>
-              <span class="block gradient-text">Farías</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-700 font-light">
-              Creando identidades visuales que impulsan marcas tecnológicas al siguiente nivel
+            <div class="flex items-center gap-6">
+              <NuxtImg 
+                src="/images/profile.png" 
+                alt="Isidora Farías" 
+                class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-purple-200 dark:border-purple-700 shadow-lg"
+                width="160"
+                height="160"
+                quality="80"
+              />
+              <h1 class="text-6xl md:text-7xl font-bold leading-tight">
+                <span class="block text-gray-900 dark:text-white">Isidora</span>
+                <span class="block gradient-text">Farías</span>
+              </h1>
+            </div>
+            <p class="text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-light">
+              Comenzando mi camino en el diseño gráfico para marcas tecnológicas
             </p>
-            <p class="text-lg text-gray-600">
-              Especializada en diseño gráfico moderno y branding para empresas tech
+            <p class="text-lg text-gray-600 dark:text-gray-400">
+              Aprendiendo y desarrollando proyectos de branding e identidad visual
             </p>
             <div class="flex gap-4 pt-6">
               <a
@@ -32,13 +42,13 @@
               </a>
               <a
                 href="#contact"
-                class="px-8 py-4 border-2 border-purple-600 text-purple-700 rounded-full font-semibold hover:bg-purple-50 transition-all hover:scale-105"
+                class="px-8 py-4 border-2 border-purple-600 dark:border-purple-400 text-purple-700 dark:text-purple-300 rounded-full font-semibold hover:bg-purple-50 dark:hover:bg-purple-900/30 transition-all hover:scale-105"
               >
                 Contacto
               </a>
             </div>
           </div>
-          <div class="relative">
+          <div class="relative scale-[0.80] hidden md:block">
             <div class="aspect-square bg-gradient-to-br from-purple-400 via-pink-400 to-yellow-300 rounded-[3rem] overflow-hidden shadow-2xl transform hover:rotate-3 transition-transform duration-500">
               <!-- Placeholder for profile image -->
               <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm">
@@ -56,21 +66,21 @@
       
       <!-- Scroll indicator -->
       <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-6 h-6 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
         </svg>
       </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="section-padding bg-gradient-to-b from-white to-purple-50">
+    <section id="portfolio" class="section-padding bg-gradient-to-b from-white to-purple-50 dark:from-gray-900 dark:to-gray-800">
       <div class="container mx-auto">
         <div class="text-center mb-16">
           <h2 class="text-5xl md:text-6xl font-bold mb-4">
-            <span class="gradient-text">Proyectos Destacados</span>
+            <span class="gradient-text">Mis Primeros Proyectos</span>
           </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Diseños que transforman ideas en experiencias visuales memorables para marcas tecnológicas
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Explorando el diseño gráfico y aprendiendo a crear experiencias visuales para marcas tecnológicas
           </p>
         </div>
 
@@ -79,7 +89,7 @@
             v-for="project in projects"
             :key="project.id"
             @click="openModal(project)"
-            class="group relative bg-white rounded-3xl overflow-hidden shadow-xl card-hover cursor-pointer transform transition-all duration-500 hover:scale-[1.02]"
+            class="group relative bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-xl card-hover cursor-pointer transform transition-all duration-500 hover:scale-[1.02]"
           >
             <div class="aspect-[4/3] bg-gradient-to-br overflow-hidden relative" :class="project.gradient">
               <!-- Placeholder for project image -->
@@ -95,15 +105,15 @@
               </div>
             </div>
             <div class="p-8">
-              <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-purple-600 transition-colors">
+              <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                 {{ project.title }}
               </h3>
-              <p class="text-gray-600 mb-4 line-clamp-2">{{ project.description }}</p>
+              <p class="text-gray-600 dark:text-gray-300 mb-4 line-clamp-2">{{ project.description }}</p>
               <div class="flex flex-wrap gap-2">
                 <span
                   v-for="tag in project.tags"
                   :key="tag"
-                  class="px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 text-sm font-semibold rounded-full"
+                  class="px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/50 dark:to-pink-900/50 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full"
                 >
                   {{ tag }}
                 </span>
@@ -124,14 +134,14 @@
         >
           <div
             @click.stop
-            class="relative w-full max-w-6xl max-h-[90vh] bg-white rounded-3xl overflow-hidden shadow-2xl"
+            class="relative w-full max-w-6xl max-h-[90vh] bg-white dark:bg-gray-800 rounded-3xl overflow-hidden shadow-2xl"
           >
             <!-- Close button -->
             <button
               @click="closeModal"
-              class="absolute top-6 right-6 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all shadow-lg hover:scale-110"
+              class="absolute top-6 right-6 z-10 w-12 h-12 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 transition-all shadow-lg hover:scale-110"
             >
-              <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
@@ -157,9 +167,9 @@
                 <button
                   v-if="currentImageIndex > 0"
                   @click="previousImage"
-                  class="absolute left-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all shadow-xl hover:scale-110"
+                  class="absolute left-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 transition-all shadow-xl hover:scale-110"
                 >
-                  <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                   </svg>
                 </button>
@@ -167,9 +177,9 @@
                 <button
                   v-if="currentImageIndex < selectedProject.images.length - 1"
                   @click="nextImage"
-                  class="absolute right-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all shadow-xl hover:scale-110"
+                  class="absolute right-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white dark:hover:bg-gray-700 transition-all shadow-xl hover:scale-110"
                 >
-                  <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                   </svg>
                 </button>
@@ -183,13 +193,13 @@
               <!-- Project Details -->
               <div class="p-8 md:p-12">
                 <h3 class="text-4xl font-bold mb-4 gradient-text">{{ selectedProject.title }}</h3>
-                <p class="text-lg text-gray-700 mb-6 leading-relaxed">{{ selectedProject.fullDescription }}</p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">{{ selectedProject.fullDescription }}</p>
                 
                 <div class="flex flex-wrap gap-2 mb-8">
                   <span
                     v-for="tag in selectedProject.tags"
                     :key="tag"
-                    class="px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 text-sm font-semibold rounded-full"
+                    class="px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-900/50 dark:to-pink-900/50 text-purple-700 dark:text-purple-300 text-sm font-semibold rounded-full"
                   >
                     {{ tag }}
                   </span>
@@ -227,38 +237,38 @@
     </Teleport>
 
     <!-- About Section -->
-    <section id="about" class="section-padding bg-white">
+    <section id="about" class="section-padding bg-white dark:bg-gray-900">
       <div class="container mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div class="order-2 md:order-1">
             <h2 class="text-5xl md:text-6xl font-bold mb-6">
               <span class="gradient-text">Sobre Mí</span>
             </h2>
-            <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
+            <div class="space-y-5 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
-                Soy <strong>Isidora Farías</strong>, diseñadora gráfica apasionada por crear identidades visuales 
-                que marcan la diferencia en el mundo digital.
+                Soy <strong>Isidora Farías</strong>, diseñadora gráfica en formación, apasionada por crear identidades visuales 
+                que marquen la diferencia en el mundo digital.
               </p>
               <p>
-                Me especializo en desarrollar <strong>branding corporativo moderno para empresas tecnológicas</strong>, 
-                fusionando elementos creativos y estéticos con una visión empresarial clara.
+                Estoy <strong>comenzando mi camino en el branding para empresas tecnológicas</strong>, 
+                aprendiendo a fusionar elementos creativos y estéticos con una visión empresarial clara.
               </p>
               <p>
-                Mi enfoque combina el arte del diseño con la estrategia de marca, creando 
-                soluciones visuales que no solo se ven bien, sino que <strong>comunican efectivamente 
+                Mi enfoque busca combinar el arte del diseño con la estrategia de marca, desarrollando 
+                soluciones visuales que no solo se vean bien, sino que <strong>comuniquen efectivamente 
                 el valor de cada proyecto</strong>.
               </p>
             </div>
 
             <div class="mt-10 space-y-6">
-              <h3 class="text-2xl font-bold text-gray-900">Habilidades Principales</h3>
+              <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Habilidades en Desarrollo</h3>
               <div class="space-y-4">
                 <div v-for="skill in skills" :key="skill.name" class="space-y-2">
                   <div class="flex justify-between items-center">
-                    <span class="font-semibold text-gray-800">{{ skill.name }}</span>
-                    <span class="text-sm text-gray-600 font-bold">{{ skill.level }}%</span>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">{{ skill.name }}</span>
+                    <span class="text-sm text-gray-600 dark:text-gray-400 font-bold">{{ skill.level }}%</span>
                   </div>
-                  <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                  <div class="h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
                     <div
                       class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000"
                       :style="{ width: skill.level + '%' }"
@@ -287,14 +297,14 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-gradient-to-b from-purple-50 to-white">
+    <section id="contact" class="section-padding bg-gradient-to-b from-purple-50 to-white dark:from-gray-900 dark:to-gray-800">
       <div class="container mx-auto max-w-5xl">
         <div class="text-center mb-16">
           <h2 class="text-5xl md:text-6xl font-bold mb-4">
-            <span class="gradient-text">Hablemos de tu Proyecto</span>
+            <span class="gradient-text">Contáctame, estoy disponible</span>
           </h2>
-          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-            Estoy disponible para colaborar en proyectos de diseño gráfico y branding
+          <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Estoy buscando nuevas oportunidades laborales o proyectos como freelancer
           </p>
         </div>
 
@@ -302,13 +312,6 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <!-- Contact Info -->
             <div class="space-y-8">
-              <div>
-                <h3 class="text-3xl font-bold mb-6">Conectemos</h3>
-                <p class="text-purple-100 text-lg mb-8">
-                  Me encantaría saber más sobre tu proyecto y cómo puedo ayudarte a dar vida a tus ideas.
-                </p>
-              </div>
-
               <!-- Email -->
               <div class="flex items-start gap-4">
                 <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -346,6 +349,26 @@
                   </a>
                 </div>
               </div>
+
+              <!-- Behance -->
+              <div class="flex items-start gap-4">
+                <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-purple-100 text-sm mb-1">Behance</p>
+                  <a
+                    href="https://www.behance.net/isidorafaras1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xl font-semibold hover:text-yellow-300 transition-colors"
+                  >
+                    behance.net/isidorafaras1
+                  </a>
+                </div>
+              </div>
             </div>
 
             <!-- Decorative element -->
@@ -359,26 +382,6 @@
                 <div class="absolute -top-6 -right-6 w-24 h-24 bg-yellow-400 rounded-3xl opacity-80 animate-float"></div>
                 <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-pink-400 rounded-3xl opacity-80 animate-float animation-delay-2000"></div>
               </div>
-            </div>
-          </div>
-
-          <!-- CTA Buttons -->
-          <div class="mt-12 pt-8 border-t border-white/20">
-            <div class="flex flex-wrap gap-4 justify-center">
-              <a
-                href="mailto:isiforafarias@gmail.com"
-                class="px-8 py-4 bg-white text-purple-700 rounded-full font-bold hover:bg-yellow-300 hover:text-purple-800 transition-all hover:scale-105 hover:shadow-xl"
-              >
-                Enviar Email
-              </a>
-              <a
-                href="https://linkedin.com/in/isidora-farias"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="px-8 py-4 bg-white/20 backdrop-blur-sm text-white border-2 border-white rounded-full font-bold hover:bg-white hover:text-purple-700 transition-all hover:scale-105"
-              >
-                Ver LinkedIn
-              </a>
             </div>
           </div>
         </div>
@@ -464,12 +467,12 @@ const projects = [
 ]
 
 const skills = [
-  { name: 'Branding', level: 95 },
-  { name: 'Adobe Illustrator', level: 92 },
-  { name: 'Adobe Photoshop', level: 90 },
-  { name: 'Figma', level: 93 },
-  { name: 'UI/UX Design', level: 88 },
-  { name: 'Typography', level: 91 }
+  { name: 'Branding', level: 70 },
+  { name: 'Adobe Illustrator', level: 65 },
+  { name: 'Adobe Photoshop', level: 68 },
+  { name: 'Figma', level: 72 },
+  { name: 'UI/UX Design', level: 60 },
+  { name: 'Typography', level: 66 }
 ]
 
 // Modal functions

@@ -1,14 +1,14 @@
 <template>
-  <footer class="bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 text-white py-16">
+  <footer class="bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 dark:from-gray-950 dark:via-purple-950 dark:to-gray-900 text-white py-16">
     <div class="container mx-auto px-4 md:px-8">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <!-- Brand -->
         <div class="space-y-4">
-          <h3 class="text-3xl font-bold gradient-text-light mb-4">Isidora Farías</h3>
-          <p class="text-purple-200 leading-relaxed">
+          <h3 class="text-3xl font-bold text-white mb-4">Isidora Farías</h3>
+          <p class="text-purple-200 dark:text-gray-300 leading-relaxed">
             Diseñadora Gráfica especializada en branding para empresas tecnológicas
           </p>
-          <div class="flex items-center gap-2 text-purple-200">
+          <div class="flex items-center gap-2 text-purple-200 dark:text-gray-300">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
@@ -25,7 +25,7 @@
             <li v-for="item in links" :key="item.href">
               <a
                 :href="item.href"
-                class="text-purple-200 hover:text-yellow-300 transition-colors flex items-center gap-2 group"
+                class="text-purple-200 dark:text-gray-300 hover:text-yellow-300 transition-colors flex items-center gap-2 group"
               >
                 <span class="w-0 h-0.5 bg-yellow-300 group-hover:w-4 transition-all duration-300"></span>
                 {{ item.label }}
@@ -42,7 +42,7 @@
               href="https://linkedin.com/in/isidora-farias"
               target="_blank"
               rel="noopener noreferrer"
-              class="w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center transition-all hover:scale-110 group"
+              class="w-12 h-12 bg-white/10 hover:bg-white/20 dark:bg-gray-800/50 dark:hover:bg-gray-700 backdrop-blur-sm rounded-xl flex items-center justify-center transition-all hover:scale-110 group"
               aria-label="LinkedIn"
             >
               <svg class="w-6 h-6 group-hover:text-yellow-300 transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -53,7 +53,7 @@
               href="https://instagram.com/isidorafarias"
               target="_blank"
               rel="noopener noreferrer"
-              class="w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center transition-all hover:scale-110 group"
+              class="w-12 h-12 bg-white/10 hover:bg-white/20 dark:bg-gray-800/50 dark:hover:bg-gray-700 backdrop-blur-sm rounded-xl flex items-center justify-center transition-all hover:scale-110 group"
               aria-label="Instagram"
             >
               <svg class="w-6 h-6 group-hover:text-yellow-300 transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -64,7 +64,7 @@
               href="https://behance.net/isidorafarias"
               target="_blank"
               rel="noopener noreferrer"
-              class="w-12 h-12 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center transition-all hover:scale-110 group"
+              class="w-12 h-12 bg-white/10 hover:bg-white/20 dark:bg-gray-800/50 dark:hover:bg-gray-700 backdrop-blur-sm rounded-xl flex items-center justify-center transition-all hover:scale-110 group"
               aria-label="Behance"
             >
               <svg class="w-6 h-6 group-hover:text-yellow-300 transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -72,17 +72,17 @@
               </svg>
             </a>
           </div>
-          <p class="text-purple-200 text-sm mt-6">
+          <p class="text-purple-200 dark:text-gray-300 text-sm mt-6">
             Disponible para proyectos freelance
           </p>
         </div>
       </div>
 
-      <div class="border-t border-purple-700/50 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-purple-200 text-sm">
-          &copy; {{ new Date().getFullYear() }} Isidora Farías. Todos los derechos reservados.
+      <div class="border-t border-purple-700/50 dark:border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-purple-200 dark:text-gray-300 text-sm">
+          &copy; {{ new Date().getFullYear() }} Isidora Farías
         </p>
-        <p class="text-purple-300 text-sm">
+        <p class="text-purple-300 dark:text-gray-400 text-sm">
           Diseñado con <span class="text-pink-400">♥</span> para marcas tech
         </p>
       </div>

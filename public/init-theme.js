@@ -1,6 +1,6 @@
 (function () {
     try {
-        const theme = localStorage.getItem('hs_theme') || 'auto';
+        const theme = localStorage.getItem('theme') || 'auto';
 
         if (theme === 'dark' ||
             (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
