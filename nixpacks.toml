@@ -1,10 +1,10 @@
 [phases.setup]
-nixPkgs = ['nodejs_22', 'python3', 'gcc']
+nixPkgs = ['nodejs_22']
+nixpkgsArchive = 'aaff2faa77e711afc16d50f825ad3673c9d6bb13'
 
 [phases.install]
 cmds = [
-  'rm -rf node_modules',
-  'npm install --legacy-peer-deps --force'
+  'npm install --include=optional --legacy-peer-deps'
 ]
 
 [phases.build]
