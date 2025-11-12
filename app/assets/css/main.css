@@ -1,24 +1,187 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "../css/fonts.css";
+@import "../css/colors.css";
+@import "tailwindcss";
+@import "preline/variants.css";
+@plugin "@tailwindcss/forms";
+@plugin "@tailwindcss/aspect-ratio";
 
+@source "../../node_modules/preline/dist/*.js";
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Adds pointer cursor to buttons */
 @layer base {
-  body {
-    @apply bg-white text-gray-900;
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  }
+
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
 }
 
-@layer components {
-  .gradient-text {
-    @apply bg-gradient-to-r from-violet-400 to-purple-600 bg-clip-text text-transparent;
-  }
+/* Defaults hover styles on all devices */
+@custom-variant hover (&:hover);
+@custom-variant dark (&:where(.dark, .dark *));
 
-  .card-hover {
-    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl;
-  }
+/* Page transitions for auth forms */
+.form-slide-enter-active,
+.form-slide-leave-active {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
 
-  .section-padding {
-    @apply py-16 px-4 md:py-24 md:px-8;
-  }
+.form-slide-enter-from {
+    opacity: 0;
+    transform: translateX(30px) scale(0.98);
+    filter: blur(2px);
+}
+
+.form-slide-leave-to {
+    opacity: 0;
+    transform: translateX(-30px) scale(0.98);
+    filter: blur(2px);
+}
+
+.form-slide-enter-to,
+.form-slide-leave-from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0);
+}
+
+/* Auth content transitions - solo para el contenido dentro del layout */
+.auth-content-enter-active,
+.auth-content-leave-active {
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.auth-content-enter-from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+}
+
+.auth-content-leave-to {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.98);
+}
+
+.auth-content-enter-to,
+.auth-content-leave-from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Smooth transitions for form elements */
+input,
+button,
+label,
+p,
+h1 {
+    transition: all 0.3s ease;
+}
+
+/* :root {
+    --color-blue-600: oklch(59.74% 0.20429 256.048);
+} */
+
+/* font size global body*/
+body {
+    font-size: 13px;
+}
+
+/* Page loader blur - para uso manual con usePageLoader */
+.page-loading-blur {
+    filter: blur(2px);
+    transition: filter 0.2s ease-out;
+}
+
+/* Page transitions - transiciones suaves solo al contenido de la página */
+.page-enter-active,
+.page-leave-active {
+    transition: all 0.2s ease-out;
+}
+
+.page-enter-from {
+    opacity: 0;
+    filter: blur(2px);
+}
+
+.page-leave-to {
+    opacity: 0;
+    filter: blur(2px);
+}
+
+.page-enter-to,
+.page-leave-from {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+/* Layout transitions - transiciones suaves al cambiar de layout completo */
+.layout-enter-active,
+.layout-leave-active {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.layout-enter-from {
+    opacity: 0;
+    transform: scale(0.96);
+    filter: blur(4px);
+}
+
+.layout-leave-to {
+    opacity: 0;
+    transform: scale(1.02);
+    filter: blur(4px);
+}
+
+.layout-enter-to,
+.layout-leave-from {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+}
+
+/* Portfolio specific styles */
+.gradient-text {
+    background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-padding {
+    padding: 6rem 1rem;
+}
+
+@media (min-width: 768px) {
+    .section-padding {
+        padding: 8rem 2rem;
+    }
+}
+
+.card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(147, 51, 234, 0.25);
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom animations */
+@keyframes gradient-shift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 5s ease infinite;
 }

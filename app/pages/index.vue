@@ -1,89 +1,109 @@
 <template>
-  <main>
+  <main class="bg-white">
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center section-padding pt-32">
-      <div class="container mx-auto">
+    <section id="home" class="min-h-screen flex items-center justify-center section-padding pt-32 relative overflow-hidden">
+      <!-- Background decorative elements -->
+      <div class="absolute top-20 right-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob"></div>
+      <div class="absolute top-40 left-10 w-72 h-72 bg-yellow-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
+      <div class="absolute -bottom-8 left-20 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
+      
+      <div class="container mx-auto relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
-            <div class="inline-block px-4 py-2 bg-violet-100 rounded-full text-violet-600 font-semibold text-sm">
-              Diseñadora Gráfica
+            <div class="inline-block px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 rounded-full text-purple-700 font-semibold text-sm backdrop-blur-sm">
+              ✨ Diseñadora Gráfica
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-              <span class="gradient-text">Isiadora Farías</span>
+            <h1 class="text-6xl md:text-7xl font-bold leading-tight">
+              <span class="block text-gray-900">Isidora</span>
+              <span class="block gradient-text">Farías</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-600">
-              Transformando ideas en experiencias visuales que conectan marcas con personas
+            <p class="text-xl md:text-2xl text-gray-700 font-light">
+              Creando identidades visuales que impulsan marcas tecnológicas al siguiente nivel
             </p>
-            <p class="text-lg text-gray-500">
-              Especializada en branding corporativo moderno para empresas tecnológicas
+            <p class="text-lg text-gray-600">
+              Especializada en diseño gráfico moderno y branding para empresas tech
             </p>
-            <div class="flex gap-4 pt-4">
+            <div class="flex gap-4 pt-6">
               <a
                 href="#portfolio"
-                class="px-8 py-3 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-all hover:scale-105"
+                class="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full font-semibold hover:shadow-2xl transition-all hover:scale-105 hover:-translate-y-1"
               >
-                Ver Portafolio
+                Ver Proyectos
               </a>
               <a
                 href="#contact"
-                class="px-8 py-3 border-2 border-violet-500 text-violet-600 rounded-full font-semibold hover:bg-violet-50 transition-all"
+                class="px-8 py-4 border-2 border-purple-600 text-purple-700 rounded-full font-semibold hover:bg-purple-50 transition-all hover:scale-105"
               >
-                Contactar
+                Contacto
               </a>
             </div>
           </div>
           <div class="relative">
-            <div class="aspect-square bg-gradient-to-br from-violet-200 to-purple-300 rounded-3xl overflow-hidden shadow-2xl">
+            <div class="aspect-square bg-gradient-to-br from-purple-400 via-pink-400 to-yellow-300 rounded-[3rem] overflow-hidden shadow-2xl transform hover:rotate-3 transition-transform duration-500">
               <!-- Placeholder for profile image -->
-              <div class="w-full h-full flex items-center justify-center text-violet-600">
-                <svg class="w-64 h-64" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm">
+                <svg class="w-64 h-64 text-white opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                 </svg>
               </div>
             </div>
-            <!-- Decorative elements -->
-            <div class="absolute -top-4 -right-4 w-24 h-24 bg-violet-400 rounded-full opacity-20 animate-pulse"></div>
-            <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-purple-400 rounded-full opacity-20 animate-pulse delay-75"></div>
+            <!-- Decorative floating elements -->
+            <div class="absolute -top-6 -right-6 w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-3xl opacity-80 shadow-xl animate-float"></div>
+            <div class="absolute -bottom-6 -left-6 w-28 h-28 bg-gradient-to-br from-purple-500 to-pink-500 rounded-3xl opacity-80 shadow-xl animate-float animation-delay-2000"></div>
           </div>
         </div>
+      </div>
+      
+      <!-- Scroll indicator -->
+      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+        </svg>
       </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="section-padding bg-white">
+    <section id="portfolio" class="section-padding bg-gradient-to-b from-white to-purple-50">
       <div class="container mx-auto">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="gradient-text">Mi Portafolio</span>
+          <h2 class="text-5xl md:text-6xl font-bold mb-4">
+            <span class="gradient-text">Proyectos Destacados</span>
           </h2>
-          <p class="text-xl text-gray-600">
-            Proyectos que combinan creatividad y estrategia visual
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Diseños que transforman ideas en experiencias visuales memorables para marcas tecnológicas
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <div
             v-for="project in projects"
             :key="project.id"
-            class="group relative bg-white rounded-2xl overflow-hidden shadow-lg card-hover cursor-pointer"
+            @click="openModal(project)"
+            class="group relative bg-white rounded-3xl overflow-hidden shadow-xl card-hover cursor-pointer transform transition-all duration-500 hover:scale-[1.02]"
           >
-            <div class="aspect-[4/3] bg-gradient-to-br overflow-hidden" :class="project.gradient">
+            <div class="aspect-[4/3] bg-gradient-to-br overflow-hidden relative" :class="project.gradient">
               <!-- Placeholder for project image -->
-              <div class="w-full h-full flex items-center justify-center text-white/50">
-                <svg class="w-32 h-32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+              <div class="w-full h-full flex items-center justify-center">
+                <svg class="w-40 h-40 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                 </svg>
               </div>
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                <span class="text-white font-bold text-lg transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                  Ver Proyecto →
+                </span>
+              </div>
             </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold mb-2 text-gray-900">{{ project.title }}</h3>
-              <p class="text-gray-600 mb-4">{{ project.description }}</p>
+            <div class="p-8">
+              <h3 class="text-2xl font-bold mb-3 text-gray-900 group-hover:text-purple-600 transition-colors">
+                {{ project.title }}
+              </h3>
+              <p class="text-gray-600 mb-4 line-clamp-2">{{ project.description }}</p>
               <div class="flex flex-wrap gap-2">
                 <span
                   v-for="tag in project.tags"
                   :key="tag"
-                  class="px-3 py-1 bg-violet-100 text-violet-600 text-sm rounded-full"
+                  class="px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 text-sm font-semibold rounded-full"
                 >
                   {{ tag }}
                 </span>
@@ -94,41 +114,153 @@
       </div>
     </section>
 
+    <!-- Project Modal -->
+    <Teleport to="body">
+      <Transition name="modal">
+        <div
+          v-if="selectedProject"
+          @click="closeModal"
+          class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+        >
+          <div
+            @click.stop
+            class="relative w-full max-w-6xl max-h-[90vh] bg-white rounded-3xl overflow-hidden shadow-2xl"
+          >
+            <!-- Close button -->
+            <button
+              @click="closeModal"
+              class="absolute top-6 right-6 z-10 w-12 h-12 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all shadow-lg hover:scale-110"
+            >
+              <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <div class="overflow-y-auto max-h-[90vh] custom-scrollbar">
+              <!-- Image Gallery -->
+              <div class="relative">
+                <div class="aspect-[16/9] bg-gradient-to-br overflow-hidden" :class="selectedProject.gradient">
+                  <img
+                    v-if="selectedProject.images[currentImageIndex]"
+                    :src="selectedProject.images[currentImageIndex]"
+                    :alt="`${selectedProject.title} - Imagen ${currentImageIndex + 1}`"
+                    class="w-full h-full object-cover"
+                  />
+                  <div v-else class="w-full h-full flex items-center justify-center">
+                    <svg class="w-48 h-48 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                </div>
+
+                <!-- Navigation arrows -->
+                <button
+                  v-if="currentImageIndex > 0"
+                  @click="previousImage"
+                  class="absolute left-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all shadow-xl hover:scale-110"
+                >
+                  <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+
+                <button
+                  v-if="currentImageIndex < selectedProject.images.length - 1"
+                  @click="nextImage"
+                  class="absolute right-4 top-1/2 -translate-y-1/2 w-14 h-14 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-all shadow-xl hover:scale-110"
+                >
+                  <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+
+                <!-- Image counter -->
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-black/60 backdrop-blur-sm rounded-full text-white text-sm font-semibold">
+                  {{ currentImageIndex + 1 }} / {{ selectedProject.images.length }}
+                </div>
+              </div>
+
+              <!-- Project Details -->
+              <div class="p-8 md:p-12">
+                <h3 class="text-4xl font-bold mb-4 gradient-text">{{ selectedProject.title }}</h3>
+                <p class="text-lg text-gray-700 mb-6 leading-relaxed">{{ selectedProject.fullDescription }}</p>
+                
+                <div class="flex flex-wrap gap-2 mb-8">
+                  <span
+                    v-for="tag in selectedProject.tags"
+                    :key="tag"
+                    class="px-4 py-2 bg-gradient-to-r from-purple-100 to-pink-100 text-purple-700 text-sm font-semibold rounded-full"
+                  >
+                    {{ tag }}
+                  </span>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="flex gap-3 overflow-x-auto pb-2">
+                  <div
+                    v-for="(image, index) in selectedProject.images"
+                    :key="index"
+                    @click="currentImageIndex = index"
+                    class="relative flex-shrink-0 w-24 h-24 rounded-xl overflow-hidden cursor-pointer transition-all hover:scale-105"
+                    :class="currentImageIndex === index ? 'ring-4 ring-purple-500' : 'opacity-60 hover:opacity-100'"
+                  >
+                    <div class="w-full h-full bg-gradient-to-br" :class="selectedProject.gradient">
+                      <img
+                        v-if="image"
+                        :src="image"
+                        :alt="`Thumbnail ${index + 1}`"
+                        class="w-full h-full object-cover"
+                      />
+                      <div v-else class="w-full h-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Transition>
+    </Teleport>
+
     <!-- About Section -->
-    <section id="about" class="section-padding bg-gradient-to-br from-violet-50 to-purple-50">
+    <section id="about" class="section-padding bg-white">
       <div class="container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div class="order-2 md:order-1">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6">
               <span class="gradient-text">Sobre Mí</span>
             </h2>
-            <div class="space-y-4 text-lg text-gray-600">
+            <div class="space-y-5 text-lg text-gray-700 leading-relaxed">
               <p>
-                Soy Isiadora Farías, diseñadora gráfica apasionada por crear identidades visuales 
+                Soy <strong>Isidora Farías</strong>, diseñadora gráfica apasionada por crear identidades visuales 
                 que marcan la diferencia en el mundo digital.
               </p>
               <p>
-                Me especializo en desarrollar branding corporativo moderno para empresas tecnológicas, 
+                Me especializo en desarrollar <strong>branding corporativo moderno para empresas tecnológicas</strong>, 
                 fusionando elementos creativos y estéticos con una visión empresarial clara.
               </p>
               <p>
                 Mi enfoque combina el arte del diseño con la estrategia de marca, creando 
-                soluciones visuales que no solo se ven bien, sino que comunican efectivamente 
-                el valor de cada proyecto.
+                soluciones visuales que no solo se ven bien, sino que <strong>comunican efectivamente 
+                el valor de cada proyecto</strong>.
               </p>
             </div>
 
-            <div class="mt-8 space-y-4">
-              <h3 class="text-2xl font-bold text-gray-900">Habilidades</h3>
-              <div class="grid grid-cols-2 gap-4">
+            <div class="mt-10 space-y-6">
+              <h3 class="text-2xl font-bold text-gray-900">Habilidades Principales</h3>
+              <div class="space-y-4">
                 <div v-for="skill in skills" :key="skill.name" class="space-y-2">
                   <div class="flex justify-between items-center">
-                    <span class="font-semibold text-gray-700">{{ skill.name }}</span>
-                    <span class="text-sm text-gray-500">{{ skill.level }}%</span>
+                    <span class="font-semibold text-gray-800">{{ skill.name }}</span>
+                    <span class="text-sm text-gray-600 font-bold">{{ skill.level }}%</span>
                   </div>
-                  <div class="h-2 bg-gray-200 rounded-full overflow-hidden">
+                  <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
                     <div
-                      class="h-full bg-gradient-to-r from-violet-500 to-purple-600 rounded-full transition-all duration-1000"
+                      class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full transition-all duration-1000"
                       :style="{ width: skill.level + '%' }"
                     ></div>
                   </div>
@@ -138,13 +270,16 @@
           </div>
 
           <div class="order-1 md:order-2">
-            <div class="aspect-square bg-gradient-to-br from-violet-200 to-purple-300 rounded-3xl overflow-hidden shadow-2xl">
-              <!-- Placeholder for about image -->
-              <div class="w-full h-full flex items-center justify-center text-violet-600">
-                <svg class="w-64 h-64" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
+            <div class="relative">
+              <div class="aspect-square bg-gradient-to-br from-purple-300 via-pink-300 to-yellow-200 rounded-[3rem] overflow-hidden shadow-2xl transform hover:rotate-2 transition-transform duration-500">
+                <!-- Placeholder for about image -->
+                <div class="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-sm">
+                  <svg class="w-64 h-64 text-white opacity-40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="0.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
               </div>
+              <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-br from-yellow-400 to-orange-400 rounded-3xl opacity-80 shadow-xl animate-float"></div>
             </div>
           </div>
         </div>
@@ -152,114 +287,98 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section-padding bg-white">
-      <div class="container mx-auto max-w-4xl">
+    <section id="contact" class="section-padding bg-gradient-to-b from-purple-50 to-white">
+      <div class="container mx-auto max-w-5xl">
         <div class="text-center mb-16">
-          <h2 class="text-4xl md:text-5xl font-bold mb-4">
-            <span class="gradient-text">Trabajemos Juntos</span>
+          <h2 class="text-5xl md:text-6xl font-bold mb-4">
+            <span class="gradient-text">Hablemos de tu Proyecto</span>
           </h2>
-          <p class="text-xl text-gray-600">
-            ¿Tienes un proyecto en mente? Me encantaría escucharte
+          <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+            Estoy disponible para colaborar en proyectos de diseño gráfico y branding
           </p>
         </div>
 
-        <div class="bg-gradient-to-br from-violet-50 to-purple-50 rounded-3xl p-8 md:p-12">
-          <form @submit.prevent="handleSubmit" class="space-y-6">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-gradient-to-br from-purple-600 to-pink-600 rounded-[3rem] p-12 md:p-16 text-white shadow-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Contact Info -->
+            <div class="space-y-8">
               <div>
-                <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">
-                  Nombre
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  v-model="formData.name"
-                  required
-                  class="w-full px-4 py-3 bg-white border border-violet-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 transition-all"
-                  placeholder="Tu nombre"
-                />
+                <h3 class="text-3xl font-bold mb-6">Conectemos</h3>
+                <p class="text-purple-100 text-lg mb-8">
+                  Me encantaría saber más sobre tu proyecto y cómo puedo ayudarte a dar vida a tus ideas.
+                </p>
               </div>
-              <div>
-                <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  v-model="formData.email"
-                  required
-                  class="w-full px-4 py-3 bg-white border border-violet-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 transition-all"
-                  placeholder="tu@email.com"
-                />
+
+              <!-- Email -->
+              <div class="flex items-start gap-4">
+                <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-purple-100 text-sm mb-1">Email</p>
+                  <a
+                    href="mailto:isiforafarias@gmail.com"
+                    class="text-xl font-semibold hover:text-yellow-300 transition-colors"
+                  >
+                    isiforafarias@gmail.com
+                  </a>
+                </div>
+              </div>
+
+              <!-- LinkedIn -->
+              <div class="flex items-start gap-4">
+                <div class="w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-purple-100 text-sm mb-1">LinkedIn</p>
+                  <a
+                    href="https://linkedin.com/in/isidora-farias"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xl font-semibold hover:text-yellow-300 transition-colors"
+                  >
+                    linkedin.com/in/isidora-farias
+                  </a>
+                </div>
               </div>
             </div>
 
-            <div>
-              <label for="subject" class="block text-sm font-semibold text-gray-700 mb-2">
-                Asunto
-              </label>
-              <input
-                type="text"
-                id="subject"
-                v-model="formData.subject"
-                required
-                class="w-full px-4 py-3 bg-white border border-violet-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 transition-all"
-                placeholder="¿En qué puedo ayudarte?"
-              />
-            </div>
-
-            <div>
-              <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">
-                Mensaje
-              </label>
-              <textarea
-                id="message"
-                v-model="formData.message"
-                required
-                rows="5"
-                class="w-full px-4 py-3 bg-white border border-violet-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500 transition-all resize-none"
-                placeholder="Cuéntame sobre tu proyecto..."
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              class="w-full md:w-auto px-8 py-4 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-all hover:scale-105"
-            >
-              Enviar Mensaje
-            </button>
-          </form>
-
-          <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div class="p-6 bg-white rounded-2xl">
-              <div class="w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
+            <!-- Decorative element -->
+            <div class="hidden md:flex items-center justify-center">
+              <div class="relative">
+                <div class="w-64 h-64 bg-white/10 backdrop-blur-sm rounded-[3rem] flex items-center justify-center">
+                  <svg class="w-32 h-32 text-white/30" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                  </svg>
+                </div>
+                <div class="absolute -top-6 -right-6 w-24 h-24 bg-yellow-400 rounded-3xl opacity-80 animate-float"></div>
+                <div class="absolute -bottom-6 -left-6 w-20 h-20 bg-pink-400 rounded-3xl opacity-80 animate-float animation-delay-2000"></div>
               </div>
-              <h4 class="font-semibold text-gray-900 mb-2">Email</h4>
-              <p class="text-gray-600">contacto@isifarias.com</p>
             </div>
+          </div>
 
-            <div class="p-6 bg-white rounded-2xl">
-              <div class="w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </div>
-              <h4 class="font-semibold text-gray-900 mb-2">Teléfono</h4>
-              <p class="text-gray-600">+56 9 1234 5678</p>
-            </div>
-
-            <div class="p-6 bg-white rounded-2xl">
-              <div class="w-12 h-12 bg-violet-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg class="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <h4 class="font-semibold text-gray-900 mb-2">Ubicación</h4>
-              <p class="text-gray-600">Santiago, Chile</p>
+          <!-- CTA Buttons -->
+          <div class="mt-12 pt-8 border-t border-white/20">
+            <div class="flex flex-wrap gap-4 justify-center">
+              <a
+                href="mailto:isiforafarias@gmail.com"
+                class="px-8 py-4 bg-white text-purple-700 rounded-full font-bold hover:bg-yellow-300 hover:text-purple-800 transition-all hover:scale-105 hover:shadow-xl"
+              >
+                Enviar Email
+              </a>
+              <a
+                href="https://linkedin.com/in/isidora-farias"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-8 py-4 bg-white/20 backdrop-blur-sm text-white border-2 border-white rounded-full font-bold hover:bg-white hover:text-purple-700 transition-all hover:scale-105"
+              >
+                Ver LinkedIn
+              </a>
             </div>
           </div>
         </div>
@@ -269,75 +388,210 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
+import { ref } from 'vue'
 
-const formData = reactive({
-  name: '',
-  email: '',
-  subject: '',
-  message: ''
+// SEO metadata para la página principal
+useHead({
+  title: 'Isidora Farías | Diseñadora Gráfica',
+  meta: [
+    { name: 'description', content: 'Portafolio de Isidora Farías — diseñadora gráfica especializada en branding para empresas tecnológicas. Proyectos de identidad visual, UI/UX y campañas digitales.' },
+    { property: 'og:title', content: 'Isidora Farías | Diseñadora Gráfica' },
+    { property: 'og:description', content: 'Portafolio de Isidora Farías — diseñadora gráfica especializada en branding para empresas tecnológicas.' },
+    { property: 'og:type', content: 'website' },
+    { property: 'og:image', content: '/og-image.svg' },
+    { property: 'og:image:width', content: '1200' },
+    { property: 'og:image:height', content: '630' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'Isidora Farías | Diseñadora Gráfica' },
+    { name: 'twitter:description', content: 'Portafolio de Isidora Farías — diseñadora gráfica especializada en branding para empresas tecnológicas.' },
+    { name: 'twitter:image', content: '/og-image.svg' }
+  ]
 })
 
+// Types
+interface Project {
+  id: number
+  title: string
+  description: string
+  fullDescription: string
+  tags: string[]
+  gradient: string
+  images: (string | null)[]
+}
+
+// Modal state
+const selectedProject = ref<Project | null>(null)
+const currentImageIndex = ref(0)
+
+// Projects data with full descriptions and image arrays
 const projects = [
   {
     id: 1,
-    title: 'Tech Startup Branding',
-    description: 'Identidad corporativa completa para startup tecnológica',
-    tags: ['Branding', 'Logo Design', 'Identity'],
-    gradient: 'from-violet-400 to-purple-500'
+    title: 'NexaTech - Rebranding Completo',
+    description: 'Transformación de identidad visual para startup de IA',
+    fullDescription: 'Desarrollé una identidad de marca completa para NexaTech, una startup especializada en inteligencia artificial. El proyecto incluyó la creación de un logotipo moderno y minimalista, paleta de colores vibrante que refleja innovación tecnológica, y un sistema de diseño escalable. El resultado es una marca que comunica confianza, modernidad y vanguardia tecnológica, perfecta para atraer inversores y clientes del sector tech.',
+    tags: ['Branding', 'Logo Design', 'Identity', 'AI'],
+    gradient: 'from-violet-400 to-purple-500',
+    images: [null, null, null, null, null] // Placeholders para 5 imágenes
   },
   {
     id: 2,
-    title: 'App Design System',
-    description: 'Sistema de diseño moderno para aplicación móvil',
-    tags: ['UI/UX', 'Design System', 'Mobile'],
-    gradient: 'from-purple-400 to-pink-500'
+    title: 'CloudFlow - Sistema de Diseño',
+    description: 'Sistema de diseño para plataforma SaaS',
+    fullDescription: 'Creé un sistema de diseño completo para CloudFlow, una plataforma SaaS de gestión empresarial. El proyecto abarcó desde la creación de componentes UI reutilizables, hasta la definición de patrones de interacción y guías de estilo. Implementé una biblioteca de componentes en Figma que facilita la consistencia visual en todo el producto, mejorando significativamente la experiencia del usuario y acelerando el proceso de desarrollo.',
+    tags: ['UI/UX', 'Design System', 'SaaS', 'Figma'],
+    gradient: 'from-purple-400 to-pink-500',
+    images: [null, null, null, null, null]
   },
   {
     id: 3,
-    title: 'Corporate Identity',
-    description: 'Renovación de imagen corporativa empresa tech',
-    tags: ['Rebranding', 'Corporate', 'Modern'],
-    gradient: 'from-violet-500 to-indigo-600'
+    title: 'DevHub - Plataforma Colaborativa',
+    description: 'Diseño UX/UI para comunidad de desarrolladores',
+    fullDescription: 'Diseñé la experiencia completa de usuario para DevHub, una plataforma que conecta desarrolladores con proyectos open source. El enfoque estuvo en crear una interfaz intuitiva que facilite la colaboración, con un diseño moderno que refleja la cultura tech. Incluye sistema de perfiles, tableros de proyectos, chat integrado y herramientas de gestión de código, todo con una estética limpia y profesional.',
+    tags: ['UX', 'UI Design', 'Community', 'Tech'],
+    gradient: 'from-indigo-400 to-violet-500',
+    images: [null, null, null, null, null]
   },
   {
     id: 4,
-    title: 'Digital Campaign',
-    description: 'Campaña visual para lanzamiento de producto',
-    tags: ['Marketing', 'Social Media', 'Campaign'],
-    gradient: 'from-pink-400 to-purple-500'
-  },
-  {
-    id: 5,
-    title: 'E-commerce Platform',
-    description: 'Diseño de experiencia de usuario para plataforma',
-    tags: ['UX', 'E-commerce', 'Web Design'],
-    gradient: 'from-indigo-400 to-violet-500'
-  },
-  {
-    id: 6,
-    title: 'Brand Guidelines',
-    description: 'Manual de marca para empresa tecnológica',
-    tags: ['Branding', 'Guidelines', 'Documentation'],
-    gradient: 'from-purple-500 to-violet-600'
+    title: 'TechVision - Campaña Visual',
+    description: 'Identidad visual para conferencia tecnológica',
+    fullDescription: 'Desarrollé la identidad visual completa para TechVision, una conferencia anual de tecnología e innovación. El proyecto incluyó diseño de marca del evento, material promocional digital y físico, señalética, presentaciones, y toda la comunicación visual en redes sociales. Creé un lenguaje visual dinámico y futurista que captura el espíritu innovador del evento, utilizando gradientes vibrantes y tipografía moderna.',
+    tags: ['Event Branding', 'Marketing', 'Social Media', 'Print'],
+    gradient: 'from-pink-400 to-purple-500',
+    images: [null, null, null, null, null]
   }
 ]
 
 const skills = [
   { name: 'Branding', level: 95 },
-  { name: 'Illustrator', level: 90 },
-  { name: 'Photoshop', level: 88 },
-  { name: 'Figma', level: 92 },
-  { name: 'UI/UX', level: 85 },
-  { name: 'Typography', level: 90 }
+  { name: 'Adobe Illustrator', level: 92 },
+  { name: 'Adobe Photoshop', level: 90 },
+  { name: 'Figma', level: 93 },
+  { name: 'UI/UX Design', level: 88 },
+  { name: 'Typography', level: 91 }
 ]
 
-const handleSubmit = () => {
-  alert('¡Gracias por tu mensaje! Te contactaré pronto.')
-  // Reset form
-  formData.name = ''
-  formData.email = ''
-  formData.subject = ''
-  formData.message = ''
+// Modal functions
+const openModal = (project: Project) => {
+  selectedProject.value = project
+  currentImageIndex.value = 0
+  document.body.style.overflow = 'hidden'
+}
+
+const closeModal = () => {
+  selectedProject.value = null
+  currentImageIndex.value = 0
+  document.body.style.overflow = 'auto'
+}
+
+const nextImage = () => {
+  if (selectedProject.value && currentImageIndex.value < selectedProject.value.images.length - 1) {
+    currentImageIndex.value++
+  }
+}
+
+const previousImage = () => {
+  if (currentImageIndex.value > 0) {
+    currentImageIndex.value--
+  }
+}
+
+// Close modal on ESC key
+if (process.client) {
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && selectedProject.value) {
+      closeModal()
+    }
+  })
 }
 </script>
+
+<style scoped>
+/* Modal transition */
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+
+.modal-enter-active > div,
+.modal-leave-active > div {
+  transition: transform 0.3s ease;
+}
+
+.modal-enter-from > div,
+.modal-leave-to > div {
+  transform: scale(0.9);
+}
+
+/* Custom scrollbar for modal */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #9333ea, #ec4899);
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #7e22ce, #db2777);
+}
+
+/* Animations */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Line clamp */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+</style>

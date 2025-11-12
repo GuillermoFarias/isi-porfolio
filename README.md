@@ -1,79 +1,77 @@
-# Portafolio de Isiadora Farías
+# Nuxt Minimal Starter
 
-Portafolio web moderno y responsivo para Isiadora Farías, diseñadora gráfica especializada en branding corporativo para empresas tecnológicas.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## 🎨 Características
+## Setup
 
-- ✨ Diseño moderno con enfoque en empresas tech
-- 🎨 Paleta de colores en tonos violeta claro
-- 📱 Totalmente responsivo (mobile-first)
-- ⚡ Construido con Nuxt 4, Vue 3 y Tailwind CSS 3
-- 🚀 Optimizado para rendimiento
-- 🎯 Secciones: Hero, Portafolio, Sobre mí, Contacto
-
-## 🛠️ Tecnologías
-
-- **Framework**: Nuxt 4
-- **UI Framework**: Vue 3
-- **Estilos**: Tailwind CSS 3
-- **TypeScript**: Para tipo seguro
-
-## 🚀 Desarrollo
-
-Instalar dependencias:
+Make sure to install dependencies:
 
 ```bash
+# npm
 npm install
+
+# pnpm
+pnpm install
+
+# yarn
+yarn install
+
+# bun
+bun install
 ```
 
-Iniciar servidor de desarrollo en `http://localhost:3000`:
+## Development Server
+
+Start the development server on `http://localhost:3000`:
 
 ```bash
+# npm
 npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
+yarn dev
+
+# bun
+bun run dev
 ```
 
-## 📦 Producción
+## Production
 
-Construir la aplicación para producción:
+Build the application for production:
 
 ```bash
+# npm
 npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
 ```
 
-Vista previa del build de producción:
+Locally preview production build:
 
 ```bash
+# npm
 npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
 ```
 
-## 📁 Estructura del Proyecto
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
-```
-├── app/
-│   ├── assets/css/       # Estilos globales y Tailwind
-│   ├── components/       # Componentes Vue reutilizables
-│   ├── pages/           # Páginas de la aplicación
-│   └── app.vue          # Componente raíz
-├── public/              # Archivos estáticos
-├── nuxt.config.ts       # Configuración de Nuxt
-└── tailwind.config.js   # Configuración de Tailwind
-```
-
-## 🎨 Personalización
-
-Los colores principales pueden modificarse en `tailwind.config.js`:
-
-```javascript
-colors: {
-  primary: {
-    light: '#c084fc',
-    DEFAULT: '#a855f7',
-    dark: '#7e22ce',
-  },
-}
-```
-
-## 📄 Licencia
-
-© 2025 Isiadora Farías. Todos los derechos reservados.
-
+reemplazar -neutral por -gray

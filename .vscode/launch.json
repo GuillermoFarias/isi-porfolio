@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch Chrome against localhost",
+            "request": "launch",
+            "type": "node",
+            "program": "${workspaceFolder}/node_modules/.bin/nuxt",
+            "args": [
+                "dev"
+            ],
+            "console": "integratedTerminal",
+            "runtimeExecutable": "/Users/guillermofarias/.nvm/versions/node/v22.5.1/bin/node"
+        },
+        {
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "request": "attach",
+            "type": "chrome",
+            "url": "http://localhost:3000",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true
+        }
+    ]
+}

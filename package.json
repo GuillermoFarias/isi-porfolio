@@ -1,5 +1,5 @@
 {
-  "name": "isi-porfolio",
+  "name": "isidora",
   "type": "module",
   "private": true,
   "scripts": {
@@ -10,14 +10,31 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "nuxt": "^4.2.1",
-    "vue": "^3.5.24",
+    "@floating-ui/vue": "^1.1.9",
+    "@nuxt/eslint": "1.9.0",
+    "@nuxt/fonts": "0.11.4",
+    "@nuxt/icon": "2.0.0",
+    "@nuxt/image": "1.11.0",
+    "@nuxtjs/seo": "^3.2.2",
+    "@pinia/nuxt": "^0.11.2",
+    "@preline/select": "^3.2.3",
+    "@preline/theme-switch": "^3.2.3",
+    "@tabler/icons-vue": "^3.35.0",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/forms": "^0.5.10",
+    "@tailwindcss/vite": "^4.1.16",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "dayjs": "^1.11.19",
+    "eslint": "^9.39.0",
+    "nuxt": "^4.2.0",
+    "pinia": "^3.0.3",
+    "pinia-plugin-persistedstate": "^4.7.1",
+    "preline": "^3.2.3",
+    "tailwindcss": "^4.1.16",
+    "uuid": "^13.0.0",
+    "vue": "^3.5.22",
+    "vue-email-editor": "^2.1.5",
     "vue-router": "^4.6.3"
-  },
-  "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.14.0",
-    "autoprefixer": "^10.4.22",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.18"
   }
 }
