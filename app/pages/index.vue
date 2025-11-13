@@ -434,10 +434,10 @@
                 <div>
                   <p class="text-purple-100 text-sm mb-1">Email</p>
                   <a
-                    href="mailto:isiforafarias@gmail.com"
+                    href="mailto:isidora.estudiocreativo@gmail.com"
                     class="text-xl font-semibold hover:text-yellow-300 transition-colors"
                   >
-                    isiforafarias@gmail.com
+                    isidora.estudiocreativo@gmail.com
                   </a>
                 </div>
               </div>
