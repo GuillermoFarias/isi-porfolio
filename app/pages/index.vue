@@ -250,25 +250,28 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
           <ProjectCard
-            title="Atendia - Atención al Cliente con IA"
-            description="Identidad de marca completa para plataforma de servicio al cliente"
-            gradient="from-blue-400 to-purple-500"
-            :tags="['Branding', 'Logo Design', 'IA', 'Corporate Identity']"
-            project-url="/projects/atendia"
+            title="Biblioteca Universitaria AIEP"
+            description="Plataforma para gestión de material bibliográfico y espacios de estudio para estudiantes universitarios"
+            gradient="from-blue-500 to-indigo-600"
+            :tags="['UI/UX', 'Prototipado', 'Educación', 'Mobile First']"
+            project-url="/projects/bibliotecauniversitaria"
+            cover-image="/projects/bibliouni/cover.jpeg"
           />
           <ProjectCard
-            title="CitrusLab - Startup Tech en IA"
-            description="Branding y merchandising para empresa tecnológica emergente"
+            title="CitrusLab - Software Factory & IA"
+            description="Diseño web y branding para startup especializada en desarrollo de software e inteligencia artificial"
             gradient="from-orange-400 to-amber-500"
-            :tags="['Branding', 'Merchandising', 'Startup', 'AI']"
+            :tags="['Diseño Web', 'UI/UX', 'Startup Tech', 'Branding']"
             project-url="/projects/citruslab"
+            cover-image="/projects/citruslab/cover.png"
           />
           <ProjectCard
-            title="Pomely - Sistema POS Intuitivo"
-            description="Diseño de marca y UI para punto de venta moderno"
-            gradient="from-pink-500 to-orange-400"
-            :tags="['UI/UX', 'Branding', 'Mobile App', 'POS']"
-            project-url="/projects/pomely"
+            title="EnlaceTerrestre - Recurso Educativo Interactivo"
+            description="Plataforma interactiva para educar sobre la fauna nativa de la región de O'Higgins"
+            gradient="from-green-400 to-emerald-500"
+            :tags="['UI/UX', 'Educación', 'Diseño Interactivo', 'Figma']"
+            project-url="/projects/enlaceterrestre"
+            cover-image="/projects/enlace-terrestre/cover.png"
           />
         </div>
       </div>
