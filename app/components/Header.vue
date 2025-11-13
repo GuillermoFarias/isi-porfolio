@@ -3,8 +3,8 @@
     class="fixed top-0 w-full z-50 transition-all duration-500"
     :class="
       isHomePage && !isScrolled
-        ? 'bg-transparent border-transparent md:bg-white/90 md:dark:bg-gray-900/90 md:backdrop-blur-lg md:shadow-sm md:border-b md:border-purple-100 md:dark:border-gray-700'
-        : 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg shadow-sm border-b border-purple-100 dark:border-gray-700'
+        ? 'bg-transparent border-transparent'
+        : 'bg-white/70 dark:bg-gray-900/70 backdrop-blur-md shadow-lg border-b border-white/20 dark:border-gray-700/30'
     "
   >
     <nav class="container mx-auto px-4 py-5 md:px-8">
