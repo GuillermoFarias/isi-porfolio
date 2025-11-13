@@ -79,13 +79,13 @@
                 />
               </div>
               <h1 class="text-7xl font-bold leading-tight text-center">
-                <span class="block text-gray-900 dark:text-white">Isidora</span>
-                <span class="block gradient-text">Farías</span>
+                <span class="isi-regular text-gray-900 dark:text-white">Isidora</span>
+                <span class="isi-regular gradient-text ms-4">Farías</span>
               </h1>
             </div>
             <!-- Desktop layout: original -->
             <div class="hidden md:flex items-center gap-6">
-              <div class="relative group">
+              <div class="relative group hidden xl:block">
                 <div
                   class="absolute -inset-1 bg-gradient-to-r from-purple-600 via-pink-600 to-yellow-500 rounded-full blur-lg opacity-50 group-hover:opacity-75 animate-pulse-slow"
                 ></div>
@@ -99,8 +99,8 @@
                 />
               </div>
               <h1 class="text-6xl md:text-7xl font-bold leading-tight">
-                <span class="block text-gray-900 dark:text-white">Isidora</span>
-                <span class="block gradient-text">Farías</span>
+                <span class="block isi-regular text-gray-900 dark:text-white">Isidora</span>
+                <span class="block isi-regular gradient-text">Farías</span>
               </h1>
             </div>
             <p
@@ -258,12 +258,11 @@
             cover-image="/projects/bibliouni/cover.jpeg"
           />
           <ProjectCard
-            title="CitrusLab - Software Factory & IA"
-            description="Diseño web y branding para startup especializada en desarrollo de software e inteligencia artificial"
+            title="CitrusLab - Startup Tech en IA"
+            description="Branding y merchandising para empresa tecnológica emergente"
             gradient="from-orange-400 to-amber-500"
-            :tags="['Diseño Web', 'UI/UX', 'Startup Tech', 'Branding']"
+            :tags="['Branding', 'Merchandising', 'Startup', 'AI']"
             project-url="/projects/citruslab"
-            cover-image="/projects/citruslab/cover.png"
           />
           <ProjectCard
             title="EnlaceTerrestre - Recurso Educativo Interactivo"
@@ -434,10 +433,10 @@
                 <div>
                   <p class="text-purple-100 text-sm mb-1">Email</p>
                   <a
-                    href="mailto:isidora.estudiocreativo@gmail.com"
+                    href="mailto:isiforafarias@gmail.com"
                     class="text-xl font-semibold hover:text-yellow-300 transition-colors"
                   >
-                    isidora.estudiocreativo@gmail.com
+                    isiforafarias@gmail.com
                   </a>
                 </div>
               </div>
