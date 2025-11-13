@@ -78,7 +78,7 @@
                   quality="80"
                 />
               </div>
-              <h1 class="text-7xl font-bold leading-tight text-center">
+              <h1 class="text-5xl font-bold leading-tight text-center">
                 <span class="isi-regular text-gray-900 dark:text-white">Isidora</span>
                 <span class="isi-regular gradient-text ms-4">Farías</span>
               </h1>
