@@ -83,7 +83,7 @@
           &copy; {{ new Date().getFullYear() }} Isidora Farías
         </p>
         <p class="text-gray-500 dark:text-gray-400 text-sm">
-          Diseñado con <span class="text-pink-500 dark:text-pink-400">♥</span>, si ves un error, estoy aprendiéndo.
+          Diseñado con <span class="text-pink-500 dark:text-pink-400">♥</span>, si ves un error, estoy aprendiendo.
         </p>
       </div>
     </div>
