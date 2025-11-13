@@ -1,8 +1,0 @@
-[build]
-  command = "npm rebuild --update-binary && npm run build"
-  publish = ".output/public"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
