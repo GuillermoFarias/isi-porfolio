@@ -1,6 +1,11 @@
 <template>
   <header
-    class="fixed top-0 w-full bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg shadow-sm z-50 border-b border-purple-100 dark:border-gray-700"
+    class="fixed top-0 w-full z-50 transition-all duration-500"
+    :class="
+      isHomePage && !isScrolled
+        ? 'bg-transparent border-transparent md:bg-white/90 md:dark:bg-gray-900/90 md:backdrop-blur-lg md:shadow-sm md:border-b md:border-purple-100 md:dark:border-gray-700'
+        : 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg shadow-sm border-b border-purple-100 dark:border-gray-700'
+    "
   >
     <nav class="container mx-auto px-4 py-5 md:px-8">
       <div class="flex items-center justify-between">
@@ -9,7 +14,7 @@
           class="text-2xl md:text-3xl font-bold transition-all duration-500 ease-in-out"
           :class="
             isHomePage
-              ? (isScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2')
+              ? (isScrolled ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-2 md:opacity-0')
               : 'opacity-100 translate-y-0'
           "
         >
